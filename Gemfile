@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'slim-rails'
 
 gem 'globalize', '~> 5.0.0'
+gem 'jquery-turbolinks'
 
 group :development do
   gem 'better_errors'

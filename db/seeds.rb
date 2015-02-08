@@ -20,8 +20,26 @@ end
 puts "Importing states..."
 CSV.foreach(Rails.root.join("states.csv"), headers: true) do |row|
   State.create! do |state|
-    state.name = row[0]
     state.code = row[1]
     state.country_id = row[2]
   end
 end
+
+puts "Importing states ja..."
+
+CSV.foreach(Rails.root.join("states.csv"), headers: true) do |row|
+  StateTranslation.create! do |state_translation|
+    state_translation.state = State.where(country_id: row[2], code: row[1]).first
+    state_translation.locale = "en"
+    state_translation.name = row[0]
+  end
+end
+
+CSV.foreach(Rails.root.join("states_ja.csv"), headers: true) do |row|
+  StateTranslation.create! do |state_translation|
+    state_translation.state = State.where(country_id: row[0], code: row[3]).first
+    state_translation.locale = "ja"
+    state_translation.name = row[2]
+  end
+end
+
