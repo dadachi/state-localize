@@ -5,10 +5,10 @@ p
   = @shop.name
 p
   strong Country:
-  = @shop.country
+  = @shop.country.name
 p
   strong State:
-  = @shop.state
+  = @shop.state.name
 
 = link_to 'Edit', edit_shop_path(@shop)
 '|

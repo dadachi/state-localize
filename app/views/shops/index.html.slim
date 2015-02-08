@@ -14,8 +14,8 @@ table
     - @shops.each do |shop|
       tr
         td = shop.name
-        td = shop.country
-        td = shop.state
+        td = shop.country.name
+        td = shop.state.name
         td = link_to 'Show', shop
         td = link_to 'Edit', edit_shop_path(shop)
         td = link_to 'Destroy', shop, data: {:confirm => 'Are you sure?'}, :method => :delete
