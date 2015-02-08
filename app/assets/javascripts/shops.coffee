@@ -20,3 +20,4 @@ jQuery ->
       $('#shop_state_id').parent().hide()
 
   $("#shop_country_id").trigger "change"
+  $("#shop_country_id").parent().hide()

@@ -3,7 +3,7 @@
 
   .form-inputs
     = f.input :name
-    = f.association :country
+    = f.association :country, collection: Country.where(alpha2: "JP"), include_blank: false
     = f.input :state_id, collection: Country.all, as: :grouped_select, group_method: :states
 
   .form-actions
