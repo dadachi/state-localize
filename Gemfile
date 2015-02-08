@@ -16,6 +16,9 @@ end
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'slim-rails'
+
+gem 'globalize', '~> 5.0.0'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
