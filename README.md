@@ -5,3 +5,4 @@ Based on [Dynamic Select Menus](http://railscasts.com/episodes/88-dynamic-select
 
 Localize state(prefecture) with [Globalize](https://github.com/globalize/globalize).  
 Localize only Japanese state(prefecture).  
+You can add state localizations by adding records to state_translations table.
