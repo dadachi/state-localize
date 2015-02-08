@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @shop.name
+p
+  strong Country:
+  = @shop.country
+p
+  strong State:
+  = @shop.state
+
+= link_to 'Edit', edit_shop_path(@shop)
+'|
+= link_to 'Back', shops_path

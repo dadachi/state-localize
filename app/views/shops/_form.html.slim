@@ -1,0 +1,10 @@
+= simple_form_for(@shop) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.association :country
+    = f.association :state
+
+  .form-actions
+    = f.button :submit
